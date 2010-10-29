@@ -6,3 +6,10 @@ http://trac.khavr.com/agiloprojects/chilli-wolf/ticket/1#comment:5
 3) workon x1scr-env
 4) easy_install pip
 5) pip install -U -r requirements.txt
+
+
+cp x1scr/settings_local.py.example x1scr/settings_local.py
+# edit it if needed
+
+python x1scr/manage.py syncdb
+python x1scr/manage.py runserver

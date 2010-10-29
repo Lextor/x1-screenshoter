@@ -1,5 +1,12 @@
 # Django settings for x1scr project.
 
+import os
+
+rel = lambda *x: os.path.abspath(os.path.join(os.path.abspath(os.path.dirname(__file__)), *x))
+
+PROJECT_ROOT = rel('../')
+SITE_ROOT = rel('')
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -94,3 +101,9 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+
+
+try:
+    from settings_local import *
+except ImportError:
+    pass
