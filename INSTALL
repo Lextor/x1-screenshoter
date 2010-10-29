@@ -1,0 +1,8 @@
+Development install:
+
+http://trac.khavr.com/agiloprojects/chilli-wolf/ticket/1#comment:5
+1) pip install -U virtualenv virtualenvwrapper 
+2) mkvirtualenv x1scr-env
+3) workon x1scr-env
+4) easy_install pip
+5) pip install -U -r requirements.txt
