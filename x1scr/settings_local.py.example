@@ -2,6 +2,8 @@ import os
 
 rel = lambda *x: os.path.abspath(os.path.join(os.path.abspath(os.path.dirname(__file__)), *x))
 
+DEV_MODE = True
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -21,3 +23,5 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
+
+SITE_URL = "http://127.0.0.1:8000/"

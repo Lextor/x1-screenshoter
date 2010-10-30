@@ -10,6 +10,8 @@ SITE_ROOT = rel('')
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+DEV_MODE = False
+
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
@@ -41,6 +43,8 @@ TIME_ZONE = 'America/Chicago'
 LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
+SITE_URL = "http://127.0.0.1:8000/"
+
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -52,12 +56,14 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+
+SCREENSHOT_ROOT = os.path.join(MEDIA_ROOT, 'screenshots')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = 's/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -87,6 +93,7 @@ ROOT_URLCONF = 'x1scr.urls'
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
+    SITE_ROOT + "/templates",
     # Don't forget to use absolute paths, not relative paths.
 )
 

@@ -4,3 +4,4 @@ x1scr/settings_local.py
 *.pyc
 *.sqlite
 *.tmp
+media/screenshots/*

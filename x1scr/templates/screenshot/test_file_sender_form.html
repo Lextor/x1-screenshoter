@@ -1,0 +1,13 @@
+{% load i18n %}<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form name="file_screenshot_form" id="id_file_screenshot_form" method="POST" enctype="multipart/form-data"
+	  action="{% url file-uploader %}">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="{% trans 'submit' %}" name="submit"/>
+    </form>
+  </body>
+</html>
