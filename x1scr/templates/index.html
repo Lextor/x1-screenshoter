@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+{% block extra_styles %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_PREFIX }}css/style.css">
+{% endblock extra_styles %}
+
+
 {% block body %}
-	Index promo page here!
+     <div id="main">
+       <div id="header">Header here</div>
+       <div id="menu">Menu block</div>
+       <div id="content">content block</div>
+       <div id="footer">footer block</div>
+     </div>
 {% endblock body %}

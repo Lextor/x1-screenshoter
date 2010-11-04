@@ -1,0 +1,35 @@
+#header{
+ background:#3e4982;
+ width:100%;
+ height:110px;
+ text-align:center;
+ color:#FFFFFF;
+ font-size:24px;
+ padding-top:40px;
+}
+#menu{
+ background:#6173cb;
+ float:left;
+ width:300px;
+ height:300px;
+/* text-align:center;*/
+ color:#FFFFFF;
+/* font-size:18px;*/
+ padding-top:10px;
+}
+#content{
+ background:#ffffff;
+ margin-left:30%;
+ height:300px;
+ text-align:center;
+}
+#footer{
+ background:#3e4982;
+ clear:both;
+ width:100%;
+ height:50px;
+ text-align:center;
+ color:#FFFFFF;
+ font-size:14px;
+ padding-top:10px;
+}
