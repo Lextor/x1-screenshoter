@@ -29,3 +29,7 @@ def file_uploader(request):
         return HttpResponse(settings.SITE_URL + screenshot_instance.screenshot.url)
 
     return redirect('test-sender-file')
+
+
+def file_conteiner(request, hash_key):
+    return HttpResponse('file will be here')
