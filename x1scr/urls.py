@@ -7,6 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', "x1scr.views.index", name="index"),
+    url(r'^base/$', "x1scr.views.base", name="base"),
     (r'^screenshot/', include("x1scr.apps.screenshot.urls")),
     (r'^admin/', include(admin.site.urls)),
 )

@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
-{% block body %}
+{% block header %}
+			<div id="logo">
+				<div style="margin-top:70px" class="whitetitle">Logo</div>
+			</div>
+			<div id="menu">
+				<div align="right" class="smallwhitetext" style="padding:9px;">
+					<a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Products</a> | <a href="#">Our Services</a> | <a href="#">Contact Us</a>
+				</div>
+			</div>
+{% endblock header %}
+
+{% block content %}
 <img src="{{ screenshot_file.direct_url }}" class="" alt="{{ screenshot_file.name }}" />
-{% endblock body %}
+{% endblock content %}
