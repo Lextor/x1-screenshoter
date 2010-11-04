@@ -3,6 +3,7 @@ import os
 from django.db import models
 from django.conf import settings
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 
 class ScreenshotFile(models.Model):
@@ -29,6 +30,12 @@ class ScreenshotFile(models.Model):
 
     def hash_url(self):
         """
-        return unical link with hash key
+        return unical link with hash key to container page with image
         """
-        return ''
+        return settings.SITE_URL[:-1] + reverse('file-conteiner', args=[self.unique_hash])
+
+    def direct_url(self):
+        '''
+        return direct url for access to file
+        '''
+        return settings.SITE_URL + self.screenshot.url
