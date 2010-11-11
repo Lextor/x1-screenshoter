@@ -4,14 +4,15 @@ from x1scr.apps.inbox.models import ContactFile
 
 class ContactFileAdmin(admin.ModelAdmin):
     list_display = ('email', 'name', 'subject', 'timestamp')
-    search_fields = ['email']    
+    search_fields = ['email']
+    list_filter = ['timestamp']
     fieldsets = (
         (None, {
-            'fields': ('vname', 'vcode', 'xtcdescription', 'xtclasstype', 'class_order')
+            'fields': ('email', 'name', 'subject', 'text')
         }),
         ('Advanced options', {
             'classes': ('collapse',),
-            'fields': ('nshablon', 'xtcconst')
+            'fields': ('timestamp', 'comment')
         }),
         )
 

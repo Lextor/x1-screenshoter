@@ -119,6 +119,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'x1scr.apps.screenshot',
+    'x1scr.apps.inbox',
+
 )
 
 
