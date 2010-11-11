@@ -1,4 +1,6 @@
 from django.db import models
+from django.forms import ModelForm, Textarea
+
 import datetime
 
 
@@ -12,3 +14,12 @@ class ContactFile(models.Model):
 
     def __unicode__(self):
         return self.email
+
+
+class ContactForm(ModelForm):
+    class Meta:
+        model = ContactFile
+        exclude = ('timestamp', 'comment')
+
+
+

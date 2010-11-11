@@ -6,6 +6,7 @@ class ContactFileAdmin(admin.ModelAdmin):
     list_display = ('email', 'name', 'subject', 'timestamp')
     search_fields = ['email']
     list_filter = ['timestamp']
+    date_hierarchy = 'timestamp'
     fieldsets = (
         (None, {
             'fields': ('email', 'name', 'subject', 'text')
