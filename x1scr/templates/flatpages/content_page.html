@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ flatpage.title }}{% endblock title %}
+
+  {% block content_text %}
+  <div id="contenttext">
+    <div style="padding:10px">
+      <span class="titletext">{{ flatpage.title }}</span>
+    </div>
+    <div class="bodytext" style="padding:12px;" align="justify">
+    {{ flatpage.content }}
+    </div>
+  </div>
+  {% endblock content_text %}
