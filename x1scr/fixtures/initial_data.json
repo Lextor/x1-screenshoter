@@ -1,11 +1,56 @@
 [
   {
+    "pk": 2, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Title here", 
+      "url": "/about/", 
+      "template_name": "flatpages/content_page.html", 
+      "sites": [
+        1
+      ], 
+      "content": "Some content for about page", 
+      "enable_comments": false
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Download", 
+      "url": "/download/", 
+      "template_name": "flatpages/content_page.html", 
+      "sites": [
+        1
+      ], 
+      "content": "Some content for doawnload page", 
+      "enable_comments": false
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Features", 
+      "url": "/features/", 
+      "template_name": "flatpages/content_page.html", 
+      "sites": [
+        1
+      ], 
+      "content": "Some content for features page", 
+      "enable_comments": false
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "flatpages.flatpage", 
     "fields": {
       "registration_required": false, 
       "title": "Welcome to x1-screenshoter!", 
-      "url": "/about/contact/", 
+      "url": "/flatpage/index/", 
       "template_name": "", 
       "sites": [
         1
@@ -24,7 +69,7 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2010-11-06 15:37:27", 
+      "last_login": "2010-11-11 01:49:21", 
       "groups": [], 
       "user_permissions": [], 
       "password": "sha1$54dfe$fc5d8a6710a2b4b9ee008eda847c6b6599f0d417", 
