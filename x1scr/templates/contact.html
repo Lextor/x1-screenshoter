@@ -5,6 +5,11 @@
   {% block content_text %}
 <div id="contenttext">
 <div style="padding:55px;" align="justify">
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+{% endif %}
 
 <form action="/contact/" method="post">
 {% csrf_token %}
