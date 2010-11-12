@@ -1,8 +1,8 @@
 from django.contrib import admin
-from x1scr.apps.inbox.models import ContactFile
+from x1scr.apps.inbox.models import ContactLog
 
 
-class ContactFileAdmin(admin.ModelAdmin):
+class ContactLogAdmin(admin.ModelAdmin):
     list_display = ('email', 'name', 'subject', 'timestamp')
     search_fields = ['email']
     list_filter = ['timestamp']
@@ -18,4 +18,4 @@ class ContactFileAdmin(admin.ModelAdmin):
         )
 
 
-admin.site.register(ContactFile, ContactFileAdmin)
+admin.site.register(ContactLog, ContactLogAdmin)
