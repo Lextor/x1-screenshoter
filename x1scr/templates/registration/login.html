@@ -1,38 +1,65 @@
 {% extends "base.html" %}
-{% block content %}
-<h1>Авторизация</h1>
 
+{% block title %}Activation{% endblock title %}
+{% block content_text %}
+<div id="contenttext">
+<div style="padding:10px">
+    <span class="titletext">Activation</span>
+</div>
+<div style="padding:55px;" align="justify">
 {% if user.is_authenticated %}
 Что такое, {{ user.username }}? Вы же уже авторизорваны.
 Впрочем, всегда можно <a href="{% url auth_logout %}">выйти</a>.<br/><br/>
 {% else %}
-
 {% if form.non_field_errors %}
 {{ form.non_field_errors }}
 {% endif %}
 
 <form method="post" action="">
 {% csrf_token %}
-<dl class="register">  
+<table>
 {% for field in form %}
-    <dt>{{ field.label_tag }}</dt>
-    <dd class="clearfix">{{ field }}
-    {% if field.help_text %}<div class="clearfix">{{ field.help_text }}</div>{% endif %}
-    {% if field.errors %}<div class="myerrors clearfix">{{ field.errors }}</div>{% endif %}
-    </dd>
+    <tr>
+        <td></td>
+        <td>
+            {% if field.errors %}
+            <span style="color: red;">
+            {% for error in field.errors %}
+               <strong>{{ error|escape }}</strong>
+            {% endfor %}
+            </span>
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ field.label_tag }}
+        </td>
+        <td>
+            {{ field }}
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            {{ field.help_text }}
+        </td>
 {% endfor %}
-</dl>
-<input type="submit" value="Вход" / class="clearfix">
-</form>
-   
-<script type="text/javascript">
-document.getElementById('id_username').focus()
-</script>
+    </tr>
+    <tr><td></td>
+        <td><input type="submit" value="Sign In" /></td>
+    </tr>
+</table>
 
- <br/><br/>
+
+</form>
+<p>
 <ul>
-    <li><a href="{% url auth_password_reset %}">Забыли пароль?</a></li>
-    <li><a href="{% url registration_register %}">Регистрация</a></li>
-</ul>  
+<LI><a href="{% url auth_password_reset %}">Forgot your password?</a>
+<LI><a href="{% url registration_register %}">Don't have an account? Sign up now</a>
+</ul>
 {% endif %}
-{% endblock %}
+</div></div>
+ {% endblock content_text %}
+
+
