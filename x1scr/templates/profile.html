@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}My page{% endblock title %}
+print {{ my_screenshot }}
+{% for item in my_screenshot %}
+{{ item }}
+{% endfor %}
+{%  block content %}
+{% endblock content %}

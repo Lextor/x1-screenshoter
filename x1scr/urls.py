@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^base/$', "x1scr.views.base", name="base"),
     (r'^screenshot/', include("x1scr.apps.screenshot.urls")),
     (r'^accounts/', include('registration.urls')),
+    url(r'^accounts/profile/$', "x1scr.views.profile", name="profile"),
     (r'^admin/', include(admin.site.urls)),
 )
 

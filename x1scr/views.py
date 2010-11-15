@@ -3,6 +3,7 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.contrib.flatpages.models import FlatPage
+from x1scr.apps.screenshot.models import ScreenshotFile
 
 
 def index(request):
@@ -39,3 +40,11 @@ def features(request):
 def message(request):
     return render_to_response('message.html',
                               context_instance=RequestContext(request, dict()))
+                              
+                              
+def profile(request):
+    my_screenshot = ScreenshotFile.objects.filter(user=request.user)
+    print my_screenshot
+    return render_to_response('profile.html', {"my_screenshot": my_screenshot},
+                              context_instance=RequestContext(request, dict()))
+
