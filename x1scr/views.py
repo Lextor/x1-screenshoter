@@ -44,7 +44,6 @@ def message(request):
                               
 def profile(request):
     my_screenshot = ScreenshotFile.objects.filter(user=request.user)
-    print my_screenshot
-    return render_to_response('profile.html', {"my_screenshot": my_screenshot},
-                              context_instance=RequestContext(request, dict()))
+    return render_to_response('profile.html',
+                              context_instance=RequestContext(request, {'my_screenshot': my_screenshot}))
 
