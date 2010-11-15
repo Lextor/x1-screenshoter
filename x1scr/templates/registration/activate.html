@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Activation{% endblock title %}
+{% block content_text %}
+<div id="contenttext">
+<div style="padding:10px">
+    <span class="titletext">Активация</span>
+</div>
+<div style="padding:55px;" align="justify">
+Привет, {{ account }}!<br/>
+Ваша учетная запись активирована.<br/> <a href="{% url auth_login %}">Заходите</a> на сайт.
+<br/>
+
+</div></div>
+ {% endblock content_text %}
+
+

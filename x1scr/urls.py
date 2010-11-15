@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^message/$', "x1scr.views.message", name="message"),
     url(r'^base/$', "x1scr.views.base", name="base"),
     (r'^screenshot/', include("x1scr.apps.screenshot.urls")),
+    (r'^accounts/', include('registration.urls')),
     (r'^admin/', include(admin.site.urls)),
 )
 
