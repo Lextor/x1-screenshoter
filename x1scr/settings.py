@@ -6,6 +6,7 @@ rel = lambda *x: os.path.abspath(os.path.join(os.path.abspath(os.path.dirname(__
 
 PROJECT_ROOT = rel('../')
 SITE_ROOT = rel('')
+LIBS_ROOT = rel('../libs')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -124,6 +125,7 @@ INSTALLED_APPS = (
 
 )
 
+PASSWORD_RESET_TIMEOUT_DAYS = 2
 
 ACCOUNT_ACTIVATION_DAYS = 2
 AUTH_USER_EMAIL_UNIQUE = True

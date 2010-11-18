@@ -5,10 +5,9 @@
   {% block content_text %}
   <div id="contenttext">
     <div style="padding:10px">
-      <span class="titletext">{{ flatpage.title }}</span>
     </div>
     <div class="bodytext" style="padding:12px;" align="justify">
-    {{ flatpage.content }}
+    {{ flatpage.content|safe }}
     </div>
   </div>
   {% endblock content_text %}

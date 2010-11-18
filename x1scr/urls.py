@@ -24,4 +24,6 @@ if settings.DEV_MODE:
         (r'^%s(.*)$' % settings.MEDIA_URL,
          'django.views.static.serve',
          {'document_root': settings.MEDIA_ROOT}),
+        (r'^(favicon.ico)$', 'django.views.static.serve',
+         {'document_root': settings.MEDIA_ROOT}),
     )
