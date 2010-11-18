@@ -5,3 +5,4 @@ x1scr/settings_local.py
 *.sqlite
 *.tmp
 media/screenshots/*
+libs/*

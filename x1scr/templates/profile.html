@@ -2,8 +2,21 @@
 
 {% block title %}My page{% endblock title %}
 {%  block content %}
-{% for item in my_screenshot %}
-{{ item }}
-{% endfor %}
+<div id="contenttext">
+<div class="bodytext" style="padding:40px;" align="justify">
 
+<table>
+    {% for item in my_screenshot %}
+    <tr>
+        <td></td>
+        <td>
+            <a href="{{ item.hash_url }}">{{ item.screenshot }}</a>
+        </td>
+        <td>
+            {{ item.datetime }}
+        </td>
+    </tr>
+{% endfor %}
+</table>
+</div></div>
 {% endblock content %}
