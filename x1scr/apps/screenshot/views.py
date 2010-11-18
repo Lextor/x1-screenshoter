@@ -3,7 +3,7 @@ from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 from django import forms
 
-from djutils.thumbs import generate_thumb
+#from x1scr.utils.thumbs import generate_thumb
 #from django.conf import settings
 
 from x1scr.apps.screenshot.models import ScreenshotFile

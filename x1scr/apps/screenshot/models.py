@@ -5,7 +5,7 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 
-from djutils.thumbs import ImageWithThumbsField
+from x1scr.utils.thumbs import ImageWithThumbsField
 
 
 class ScreenshotFile(models.Model):

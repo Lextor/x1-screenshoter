@@ -8,7 +8,9 @@
 <table>
     {% for item in my_screenshots %}
     <tr>
-      <td><img src='/{{ item.get_thumbnail_url }}' /></td>
+        <td>
+            <img src='/{{ item.get_thumbnail_url }}' />
+        </td>
         <td>
             <a href="{{ item.hash_url }}">{{ item.screenshot }}</a>
         </td>
