@@ -35,15 +35,15 @@ def features(request):
     flatpage = get_object_or_404(FlatPage, url=url_path)
     return render_to_response('flatpages/about.html',
                               context_instance=RequestContext(request, dict(flatpage=flatpage)))
-                              
-                              
+                             
+
 def message(request):
     return render_to_response('message.html',
                               context_instance=RequestContext(request, dict()))
-                              
-                              
+
+
 def profile(request):
-    my_screenshot = ScreenshotFile.objects.filter(user=request.user)
+    my_screenshots = ScreenshotFile.objects.filter(user=request.user)
     return render_to_response('profile.html',
-                              context_instance=RequestContext(request, {'my_screenshot': my_screenshot}))
+                              context_instance=RequestContext(request, {'my_screenshots': my_screenshots}))
 

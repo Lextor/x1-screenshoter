@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 from django import forms
+
+from djutils.thumbs import generate_thumb
 #from django.conf import settings
 
 from x1scr.apps.screenshot.models import ScreenshotFile
@@ -19,7 +21,6 @@ def test_file_sender_form(request):
 
 
 def file_uploader(request):
-    print request.POST, request.FILES
     if request.method == "POST" and \
     'file_screenshot' in request.FILES and \
     request.FILES['file_screenshot']:

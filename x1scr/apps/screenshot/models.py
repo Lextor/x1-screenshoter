@@ -5,10 +5,12 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 
+from djutils.thumbs import ImageWithThumbsField
+
 
 class ScreenshotFile(models.Model):
     user = models.ForeignKey(User, null=True, blank=True)
-    screenshot = models.ImageField(upload_to='screenshots', max_length=384)
+    screenshot = ImageWithThumbsField(upload_to='screenshots', max_length=384, sizes=((100, 100), ))
     unique_hash = models.CharField(unique=True, max_length=8, editable=False)
     name = models.CharField(max_length=256)
     datetime = models.DateTimeField(auto_now_add=True)
@@ -39,3 +41,6 @@ class ScreenshotFile(models.Model):
         return direct url for access to file
         '''
         return settings.SITE_URL + self.screenshot.url
+
+    def get_thumbnail_url(self):
+        return self.screenshot.url_100x100

@@ -6,9 +6,9 @@
 <div class="bodytext" style="padding:40px;" align="justify">
 
 <table>
-    {% for item in my_screenshot %}
+    {% for item in my_screenshots %}
     <tr>
-        <td></td>
+      <td><img src='/{{ item.get_thumbnail_url }}' /></td>
         <td>
             <a href="{{ item.hash_url }}">{{ item.screenshot }}</a>
         </td>
