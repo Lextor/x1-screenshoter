@@ -7,12 +7,11 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
-#logo{float:left; background-image:url(tie_logo.gif); width:274px; height:213px;}
-#smalllogo{float:left; background-image:url(logo.png); background-repeat:no-repeat; background-position:top center;width:274px; height:56px;}
-#topheader{float:right; width:526px; height:97px; background-color:#F0F0F0; position:relative}
+#logo{float:left; background-image:url(logo.png); width:200px; height:56px;}
+#topheader{float:right; width:600px; height:56px; background-color:#F0F0F0; position:relative}
 #toplinks{position:absolute; right:10px; top:10px;}
-#menu{float:right; width:526px; height:32px; background-image:url(bg_menu.gif); background-repeat:repeat-x;}
-#submenu{float:right; width:526px; height:32px; background-image:url(bg_submenu.gif); background-position:top; background-repeat:repeat-x;}
+#menu{float:right; width:800px; height:32px; background-image:url(bg_menu.gif); background-repeat:repeat-x;}
+#submenu{float:right; width:800px; height:32px; background-image:url(bg_submenu.gif); background-position:top; background-repeat:repeat-x;}
 #contenttext{float:right; width:526px;}
 #blocktext{float:left; width:800px}
 #column{float:left; width:50%;}

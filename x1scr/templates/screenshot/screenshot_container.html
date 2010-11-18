@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
+{% comment %}
 {% block header %}
-  <div id="smalllogo">
-    <div style="margin-top:10px" class="whitetitle">Logo</div>
+  <div id="logo">
+    <div style="margin-top:10px" class="whitetitle"></div>
   </div>
 {% include 'main_menu.html' %}
 {% endblock header %}
+{% endcomment %}
 
 {% block content %}
 <img src="{{ screenshot_file.direct_url }}" class="" alt="{{ screenshot_file.name }}" />

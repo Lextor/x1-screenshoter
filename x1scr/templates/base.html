@@ -12,9 +12,10 @@
     <div id="content" style="width:800px">
 {% block header %}
   <div id="logo">
-    <div style="margin-top:70px" class="whitetitle"></div>
+    <div style="margin-top:10px" class="whitetitle"></div>
   </div>
   <div id="topheader">
+{% comment %}
     <div align="left" class="bodytext">
       <br />
       <strong>Your Company Name</strong><br />
@@ -23,6 +24,7 @@
       Phone: 432-653-3121<br />
       sales@thetiecompany.com
     </div>
+{% endcomment %}
       <div id="toplinks" class="smallgraytext">
     {% if user.is_authenticated %}
        <a href="/accounts/profile/">{{ user.username }}</a> |
@@ -34,11 +36,13 @@
       </div>
   </div>
   {% include 'main_menu.html' %}
+{% comment %}
   <div id="submenu">
     <div align="right" class="smallgraytext" style="padding:10px;">
       <a href="#">Submenu 1</a> | <a href="#">Submenu 2</a> | <a href="#">Submenu 3</a> | <a href="#">Submenu 4</a> | <a href="#">Submenu 5</a> | <a href="#">Submenu 6</a>
     </div>
   </div>
+{% endcomment %}
 {% endblock header %}
 
 {% block content %}
