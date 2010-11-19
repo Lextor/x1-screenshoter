@@ -120,13 +120,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.admin',
     'registration',
-    #'profiles',
+    'profiles',
     'x1scr.apps.screenshot',
     'x1scr.apps.inbox',
 
 )
 
-#AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+AUTH_PROFILE_MODULE = 'inbox.UserProfile'
 
 PASSWORD_RESET_TIMEOUT_DAYS = 2
 

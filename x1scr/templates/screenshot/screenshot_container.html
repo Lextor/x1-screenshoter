@@ -1,18 +1,8 @@
 {% extends "base.html" %}
 
 
-{% block header %}
-  <div id="logo">
-    <div style="margin-top:10px" class="whitetitle"></div>
-  </div>
-{% include 'main_menu.html' %}
-{% endblock header %}
-
-
 {% block content %}
-<div id="contenttext">
-  <div class="bodytext" style="padding:12px;" align="justify">
+
     <img src="{{ screenshot_file.direct_url }}" class="" alt="{{ screenshot_file.name }}" />
-  </div>
-</div>
+
 {% endblock content %}

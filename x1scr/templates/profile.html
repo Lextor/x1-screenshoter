@@ -9,7 +9,7 @@
     {% for item in my_screenshots %}
     <tr>
         <td>
-            <img src='/{{ item.get_thumbnail_url }}' />
+            <a href="{{ item.hash_url }}"><img src='/{{ item.get_thumbnail_url }}' /></a>
         </td>
         <td>
             <a href="{{ item.hash_url }}">{{ item.screenshot }}</a>
