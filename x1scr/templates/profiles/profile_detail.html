@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Detail Profile{% endblock %}
-{% block content %}
-<p><strong>Address 2:</strong><br>{{ profile.work }}</p>
 
-{% endblock content %}
+{% block content_text %}
+<div id="contenttext">
+<div style="padding:12px;" align="justify">
+
+<p><strong>Work: </strong>{{ profile.work }}</p>
+</div></div>
+
+{% endblock content_text %}
