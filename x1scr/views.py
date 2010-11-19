@@ -23,13 +23,6 @@ def about(request):
                               context_instance=RequestContext(request, dict(flatpage=flatpage)))
 
 
-def download(request):
-    url_path = request.META['PATH_INFO']
-    flatpage = get_object_or_404(FlatPage, url=url_path)
-    return render_to_response('flatpages/about.html',
-                              context_instance=RequestContext(request, dict(flatpage=flatpage)))
-
-
 def features(request):
     url_path = request.META['PATH_INFO']
     flatpage = get_object_or_404(FlatPage, url=url_path)

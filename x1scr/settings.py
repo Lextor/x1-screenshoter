@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'profiles',
     'x1scr.apps.screenshot',
     'x1scr.apps.inbox',
+    'x1scr.apps.program',
 
 )
 
