@@ -3,20 +3,15 @@
 {% block body %}
   <div id="page" align="center">
     <div id="content" style="width:800px">
-      <div id="logo">
-        <div style="margin-top:10px" class="whitetitle"></div>
-      </div>
+      <a href='{% url index %}'>
+	<div id="logo"></div>
+      </a>
       <div id="topheader">
-{% comment %}
+
         <div align="left" class="bodytext">
-        <br />
-        <strong>Your Company Name</strong><br />
-        Evergreen Terrace 742<br />
-        Kansas Missouri<br />
-        Phone: 432-653-3121<br />
-        sales@thetiecompany.com
+        <h2>MAKE SCREENSHOT EASY - SHARE IT QUICK</h2>
         </div>
-{% endcomment %}
+
         <div id="toplinks" class="smallgraytext">
     {% if user.is_authenticated %}
         <a href="/accounts/profile/">{{ user.username }}</a> |
