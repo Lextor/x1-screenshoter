@@ -27,8 +27,7 @@
 	
       <div id="toplinks" class="smallgraytext">
     {% if user.is_authenticated %}
-       <a href="/accounts/profile/">{{ user.username }}</a> |
-       <a href="/profiles/create/">profile</a> |
+       <a href="/profiles/create/">{{ user.username }}</a> |
        <a href="{% url auth_logout %}">Sign Out</a>
     {% else %}
        <a href="/accounts/login/">Login</a> |
@@ -65,9 +64,10 @@
     <div align="justify" class="graypanel">
       <span class="smalltitle">News</span><br /><br />
       <span class="smallredtext">November 22, 2010</span><br />
-      <span class="bodytext">Relise.</span><br />
-      <a href="#" class="smallgraytext">More...</a><br /><br />
+      <span class="bodytext">We are released! <br />xScreenshot is available for Linux and Windows</span><br />
       {% comment %}
+      <a href="#" class="smallgraytext">More...</a><br /><br />
+
       <span class="smallredtext">September 27, 2006</span><br />
       <span class="bodytext">Curabitur arcu tellus, suscipit in, aliquam eget, ultricies id, sapien. Nam est.</span><br />
       <a href="#" class="smallgraytext">More...</a><br /><br />

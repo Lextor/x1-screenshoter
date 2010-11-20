@@ -124,10 +124,11 @@ INSTALLED_APPS = (
     'x1scr.apps.screenshot',
     'x1scr.apps.inbox',
     'x1scr.apps.program',
+    'x1scr.apps.profile',
 
 )
 
-AUTH_PROFILE_MODULE = 'inbox.UserProfile'
+AUTH_PROFILE_MODULE = 'profile.UserProfile'
 
 PASSWORD_RESET_TIMEOUT_DAYS = 2
 
