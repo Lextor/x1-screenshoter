@@ -2,7 +2,9 @@
 
 
 {% block content %}
-
-    <img src="{{ screenshot_file.direct_url }}" class="" alt="{{ screenshot_file.name }}"/>
-
+<div class="bodytext" style="padding:90px 15px;" align="center">
+  <a href="{{ screenshot_file.direct_url }}">
+    <img src="{{ screenshot_file.direct_url }}" class="screenshot_image" alt="{{ screenshot_file.name }}"{% if screenshot_file.screenshot.width > 800 %} width="100%"{% endif %} />
+  </a>
+</dev>
 {% endblock content %}
