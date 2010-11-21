@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.contrib.flatpages.models import FlatPage
 from x1scr.apps.screenshot.models import ScreenshotFile
+from x1scr.apps.news.models import News
 
 
 def index(request):
@@ -13,7 +14,7 @@ def index(request):
 
 def base(request):
     return render_to_response('base.html',
-                              context_instance=RequestContext(request, dict()))
+                              context_instance=RequestContext(request, {'news': news}))
 
 
 def about(request):
@@ -39,4 +40,18 @@ def profile(request):
     my_screenshots = ScreenshotFile.objects.filter(user=request.user)
     return render_to_response('profile.html',
                               context_instance=RequestContext(request, {'my_screenshots': my_screenshots}))
+
+
+def news(request):
+    news = News.objects.filter(published=1).order_by('-date_published')[0:3]
+    return render_to_response('news.html',
+                              context_instance=RequestContext(request, {'news': news}))
+
+
+
+def news_item(request, news_id):
+    news_item = News.objects.get(pk=news_id)
+    return render_to_response('news_item.html',
+                              context_instance=RequestContext(request, {'news_item': news_item}))
+
 

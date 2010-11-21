@@ -13,14 +13,14 @@
 {% for field in form %}
 <tr><td></td>
         <td>
-            
+
             {% if field.errors %}
             <span style="color: red;">
             {% for error in field.errors %}
                <strong>{{ error|escape }}</strong>
             {% endfor %}
             </span>
-            
+
             {% endif %}
         </td>
     </tr>
@@ -30,7 +30,7 @@
         </td>
         <td>
             {{ field }}
-            
+
         </td>
     <tr><td></td>
         <td>

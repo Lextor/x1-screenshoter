@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'x1scr.apps.screenshot',
     'x1scr.apps.inbox',
     'x1scr.apps.program',
+    'x1scr.apps.news',
 
 )
 

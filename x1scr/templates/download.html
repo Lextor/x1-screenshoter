@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Download{% endblock title %}
+
+  {% block content_text %}
+<div id="contenttext">
+<div style="padding:30px;" align="justify">
+
+<table class="graypanel" border="1">
+    {% for item in download_program %}
+    <tr align="center">
+        <td>
+            <img src='/{{ item.get_ico_url }} ' />  {{ item.version }}
+        </td>
+        <td>
+            {{ item.platform }}
+        </td>
+        <td>
+            <a href="/{{ item.get_program_file_url }}">download</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <span class="bodytext">
+            Description<br>
+            {{ item.description }}
+            </span>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div></div>
+    {% endblock content_text %}
