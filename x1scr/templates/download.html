@@ -2,33 +2,29 @@
 
 {% block title %}Download{% endblock title %}
 
+
   {% block content_text %}
-<div id="contenttext">
-<div style="padding:30px;" align="justify">
 
-<table class="graypanel" border="1">
-    {% for item in download_program %}
-    <tr align="center">
-        <td>
-            <img src='/{{ item.get_ico_url }} ' />  {{ item.version }}
-        </td>
-        <td>
-            {{ item.platform }}
-        </td>
-        <td>
-            <a href="/{{ item.get_program_file_url }}">download</a>
-        </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-            <span class="bodytext">
-            Description<br>
-            {{ item.description }}
-            </span>
-        </td>
-    </tr>
-    {% endfor %}
-</table>
+  <div id="contenttext">
+    <div style="padding:10px">
+      <span class="titletext">Download</span>
+    </div>
+    <div class="bodytext" style="padding:12px;" align="justify">
+      {% for program in programs %}
+      <a href="{{ program.program_file }}" target="_blank" title="Capture and share screenshot on {{ program.platform }}">
+	Download xScreenshot for {{ program.platform }}</a>
+      <br />
+      <strong>
+	{{ program.description }}
+      </strong>
+      <br />
+      {{ program.description }}
+      <br />
+      <br />
 
-</div></div>
-    {% endblock content_text %}
+  {% endfor %}
+    </div>
+  </div>
+
+
+  {% endblock content_text %}
