@@ -1,19 +1,11 @@
-<html>
-  <head>
-    <title>News</title>
-    <link rel="stylesheet" type="text/css" href="{{ MEDIA_PREFIX }}css/style.css">
-  </head>
-  <body>
-<div id="leftpanel">
+  <div id="leftpanel">
     <div align="justify" class="graypanel">
       <span class="smalltitle">News</span><br /><br />
     {% for item in news %}
       <span class="smallredtext">{{ item.name }}</span><br />
       <span class="bodytext">{{ item.chortext }}<br />
       {{ item.date_published }}</span>
-      <a href="/news/{{ item.id }}" class="smallgraytext">More...</a><br /><br />
+      <a href="{% url news_item item.id %}" class="smallgraytext">More...</a><br /><br />
     {% endfor %}
     </div>
   </div>
-</body>
-</html>

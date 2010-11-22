@@ -1,16 +1,21 @@
-<html>
-  <head>
-    <title>News_item</title>
-    <link rel="stylesheet" type="text/css" href="{{ MEDIA_PREFIX }}css/style.css">
-  </head>
-  <body>
-<div id="leftpanel">
-    <div align="justify" class="graypanel">
-      <span class="smalltitle">{{ news_item.name }}</span><br /><br />
-      <span class="bodytext">{{ news_item.text }}<br />
-      {{ news_item.date_published }}</span>
+{% extends "base.html" %}
 
+{% block title %}{{ news.name }}{% endblock title %}
+
+
+  {% block content_text %}
+
+  <div class="bodytext" style="padding:90px 15px;" align="center">
+    <div style="padding:10px">
+      <span class="titletext">{{ news.name }}</span>
+    </div>
+    <div class="bodytext" style="padding:12px;" align="justify">
+      {{ news.text }}
     </div>
   </div>
-</body>
-</html>
+
+
+  {% endblock content_text %}
+
+  {% block leftpanel %}
+  {% endblock leftpanel %}

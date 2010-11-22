@@ -50,10 +50,7 @@ def news(request):
                               context_instance=RequestContext(request, {'news': news}))
 
 
-
 def news_item(request, news_id):
-    news_item = News.objects.get(pk=news_id)
+    news = News.objects.get(pk=news_id)
     return render_to_response('news_item.html',
-                              context_instance=RequestContext(request, {'news_item': news_item}))
-
-
+                              context_instance=RequestContext(request, {'news': news}))

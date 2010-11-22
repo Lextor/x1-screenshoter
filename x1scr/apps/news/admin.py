@@ -9,12 +9,8 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ['publisher', 'published', 'date_published']
     date_hierarchy = 'date_published'
 
-'''
-class FlatPageAdmin(FlatPageAdminOld):
     class Media:
         js = ('/%sjs/tiny_mce/tiny_mce.js' % settings.MEDIA_URL,
-              '/%sjs/textareas.js' % settings.MEDIA_URL,)
-'''
+              '/%sjs/textareas.js' % settings.MEDIA_URL, )
 
 admin.site.register(News, NewsAdmin)
-

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load get_news_list %}
 {% block title %}Download{% endblock title %}
 
 
@@ -28,3 +28,7 @@
 
 
   {% endblock content_text %}
+
+  {% block leftpanel %}
+  {% pull_latest_news %}
+  {% endblock leftpanel %}
