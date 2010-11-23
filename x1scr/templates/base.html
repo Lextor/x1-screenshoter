@@ -1,7 +1,11 @@
 {% load i18n %}<!DOCTYPE html>
 <html>
   <head>
-    <title>{% block title %}{% trans "Make cool screenshots anywhere!" %}{% endblock title %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="{{ MEDIA_PREFIX }}img/favicon.ico?v=0.2" type="image/x-icon">
+    <link rel="icon" href="{{ MEDIA_PREFIX }}img/favicon.ico?v=0.2" type="image/x-icon">
+
+    <title>eXtended Screenshot - {% block title %}{% trans "Make cool screenshots anywhere!" %}{% endblock title %}</title>
     <link rel="stylesheet" type="text/css" href="{{ MEDIA_PREFIX }}css/style.css">
     {% block extra_styles %}
     {% endblock extra_styles %}
@@ -11,24 +15,19 @@
   <div id="page" align="center">
     <div id="content" style="width:800px">
 {% block header %}
-  <div id="logo">
-    <div style="margin-top:10px" class="whitetitle"></div>
-  </div>
-  <div id="topheader">
-{% comment %}
-    <div align="left" class="bodytext">
-      <br />
-      <strong>Your Company Name</strong><br />
-      Evergreen Terrace 742<br />
-      Kansas Missouri<br />
-      Phone: 432-653-3121<br />
-      sales@thetiecompany.com
-    </div>
-{% endcomment %}
+      <a href='{% url index %}'>
+	<div id="logo"></div>
+      </a>
+
+      <div id="topheader">
+      
+	<div align="left" class="bodytext">
+          <h2 id="slogan">MAKE SCREENSHOT EASY - SHARE IT QUICK</h2>
+	</div>
+	
       <div id="toplinks" class="smallgraytext">
     {% if user.is_authenticated %}
-       <a href="/accounts/profile/">{{ user.username }}</a> |
-       <a href="/profiles/create/">profile</a> |
+       <a href="/profiles/create/">{{ user.username }}</a> |
        <a href="{% url auth_logout %}">Sign Out</a>
     {% else %}
        <a href="/accounts/login/">Login</a> |
@@ -64,15 +63,18 @@
   <div id="leftpanel">
     <div align="justify" class="graypanel">
       <span class="smalltitle">News</span><br /><br />
+      <span class="smallredtext">November 22, 2010</span><br />
+      <span class="bodytext">We are released! <br />xScreenshot is available for Linux and Windows</span><br />
+      {% comment %}
+      <a href="#" class="smallgraytext">More...</a><br /><br />
+
       <span class="smallredtext">September 27, 2006</span><br />
       <span class="bodytext">Curabitur arcu tellus, suscipit in, aliquam eget, ultricies id, sapien. Nam est.</span><br />
       <a href="#" class="smallgraytext">More...</a><br /><br />
       <span class="smallredtext">September 27, 2006</span><br />
       <span class="bodytext">Curabitur arcu tellus, suscipit in, aliquam eget, ultricies id, sapien. Nam est.</span><br />
       <a href="#" class="smallgraytext">More...</a><br /><br />
-      <span class="smallredtext">September 27, 2006</span><br />
-      <span class="bodytext">Curabitur arcu tellus, suscipit in, aliquam eget, ultricies id, sapien. Nam est.</span><br />
-      <a href="#" class="smallgraytext">More...</a><br /><br />
+      {% endcomment %}
     </div>
   </div>
   {% endblock leftpanel %}
@@ -80,7 +82,7 @@
 
 {% block footer %}
   <div id="footer" class="smallgraytext">
-    <a href="#">Home</a> | <a href="#">About Us</a> | <a href="#">Products</a> | <a href="#">Our Services</a> | <a href="#">Contact Us</a> | Our Company Name &copy; 2010</a> 
+    <a href="{% url index %}">xScreenshot</a> - easy capture your screen and quick share in web | <a href="http://dmitrij.org" title="Dmitrij.org" class="dsoftlink"><font color="#FF0000">D</font>Soft Development</a> &copy; 2010
   </div>
 {% endblock footer %}
 

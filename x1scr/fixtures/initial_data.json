@@ -1,36 +1,36 @@
 [
   {
+    "pk": 1, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Welcome to x1-screenshoter!", 
+      "url": "/", 
+      "template_name": "index.htm", 
+      "sites": [
+        1
+      ], 
+      "content": "<p>&nbsp;</p>\r\n<p style=\"text-align: center;\"><a href=\"http://sourceforge.net/projects/xscreenshot/files/xscreenshot-linux-i386.tar.gz/download\" target=\"_blank\" title=\"Capture and share screenshot on Linux\">Download xScreenshot for Linux</a> | <a href=\"http://sourceforge.net/projects/xscreenshot/files/xscreenshot-win32.exe/download\" target=\"_blank\" title=\"Capture and share screenshot on Windows\">Download xScreenshot for Windows</a></p>\r\n<p><img src=\"/s/img/manual.png\" border=\"0\" alt=\"how to make and share screenshot in one click\" /></p>", 
+      "enable_comments": false
+    }
+  }, 
+  {
     "pk": 2, 
     "model": "flatpages.flatpage", 
     "fields": {
       "registration_required": false, 
-      "title": "Title here", 
+      "title": "About", 
       "url": "/about/", 
       "template_name": "flatpages/content_page.html", 
       "sites": [
         1
       ], 
-      "content": "Some content for about page", 
+      "content": "<p>Some content for about page</p>", 
       "enable_comments": false
     }
   }, 
   {
     "pk": 3, 
-    "model": "flatpages.flatpage", 
-    "fields": {
-      "registration_required": false, 
-      "title": "Download", 
-      "url": "/download/", 
-      "template_name": "flatpages/content_page.html", 
-      "sites": [
-        1
-      ], 
-      "content": "Some content for doawnload page", 
-      "enable_comments": false
-    }
-  }, 
-  {
-    "pk": 4, 
     "model": "flatpages.flatpage", 
     "fields": {
       "registration_required": false, 
@@ -46,21 +46,6 @@
   }, 
   {
     "pk": 1, 
-    "model": "flatpages.flatpage", 
-    "fields": {
-      "registration_required": false, 
-      "title": "Welcome to x1-screenshoter!", 
-      "url": "/flatpage/index/", 
-      "template_name": "", 
-      "sites": [
-        1
-      ], 
-      "content": "Welcome to x1-screenshoter!\r\nHi! This is my third design for OSWD, with CSS and XHTML 1.0 Transitional Validation. You can do whatever you want with this template, just keep the Hosting Colombia link at the bottom. Enjoy!\r\n\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur id est tincidunt nisl pellentesque tincidunt. Donec in mauris. Mauris neque magna, consectetuer id, malesuada vitae, tincidunt sit amet, mi. Aliquam lacinia. Suspendisse potenti. Proin justo lorem, rutrum ac, facilisis in, malesuada sed, ligula. Mauris lobortis lacus at nibh. Aenean vitae odio vel odio placerat hendrerit. Suspendisse lacus lacus, tempor id, pharetra eget, ornare sit amet, pede. Sed aliquet, justo ac elementum pretium, arcu leo placerat est, a luctus purus diam eget arcu. Nam augue diam, mollis a, scelerisque eget, aliquet condimentum, pede. Vestibulum tristique lectus sed augue.\r\n\r\nAenean ut mauris luctus mauris interdum convallis. Nunc vestibulum sodales nulla. Nulla vitae massa. Maecenas vel tellus vitae elit mattis adipiscing. In pulvinar felis sed est. Mauris non mi. Duis ultrices dolor ut orci. Quisque lacinia arcu et purus. Sed euismod metus nec augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dolor leo, aliquam a, placerat sit amet, accumsan eget, dolor. Sed lacinia augue in magna. Fusce sed enim. Vestibulum et mauris. Phasellus in lectus. Pellentesque eu elit in dolor ullamcorper sodales. Vestibulum interdum ornare ligula. Mauris felis odio, rhoncus sed, adipiscing fermentum, tincidunt eu, metus. Suspendisse viverra rhoncus purus. ", 
-      "enable_comments": false
-    }
-  }, 
-  {
-    "pk": 1, 
     "model": "auth.user", 
     "fields": {
       "username": "admin", 
@@ -69,12 +54,42 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2010-11-11 01:49:21", 
+      "last_login": "2010-11-20 14:05:37", 
       "groups": [], 
       "user_permissions": [], 
       "password": "sha1$54dfe$fc5d8a6710a2b4b9ee008eda847c6b6599f0d417", 
       "email": "admin@testl.com", 
       "date_joined": "2010-11-06 11:11:43"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "program.program", 
+    "fields": {
+      "ico": "", 
+      "description": "First screenshoter for Linux", 
+      "promo": "", 
+      "program_file": "http://sourceforge.net/projects/xscreenshot/files/xscreenshot-linux-i386.tar.gz/download", 
+      "releasedate": "2010-11-20", 
+      "platform": "Linux", 
+      "version": "0.1", 
+      "published": true, 
+      "features": []
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "program.program", 
+    "fields": {
+      "ico": "", 
+      "description": "Powerful Screenshoter anywhere\r\n", 
+      "promo": "", 
+      "program_file": "http://sourceforge.net/projects/xscreenshot/files/xscreenshot-win32.exe/download", 
+      "releasedate": "2010-11-22", 
+      "platform": "Windows", 
+      "version": "0.1", 
+      "published": true, 
+      "features": []
     }
   }
 ]

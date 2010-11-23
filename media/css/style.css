@@ -9,7 +9,8 @@ body {
 }
 #logo{float:left; background-image:url(logo.png); width:200px; height:56px;}
 #topheader{float:right; width:600px; height:56px; position:relative}
-#toplinks{position:absolute; right:10px; top:10px;}
+#toplinks{position:absolute; right:10px; top:0px;}
+#slogan{position:absolute; left:10px; top:5px;}
 #menu{float:right; width:800px; height:32px; background-image:url(bg_menu.gif); background-repeat:repeat-x;}
 #submenu{float:right; width:800px; height:32px; background-image:url(bg_submenu.gif); background-position:top; background-repeat:repeat-x;}
 #contenttext{float:right; width:526px;}
@@ -78,4 +79,8 @@ body {
 }
 .smallgraytext a:hover{
 	text-decoration:underline;
+}
+
+img.screenshot_image {
+    border: 0;
 }

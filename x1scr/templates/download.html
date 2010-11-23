@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+  {% block content_text %}
+
+  <div id="contenttext">
+    <div style="padding:10px">
+      <span class="titletext">Download</span>
+    </div>
+    <div class="bodytext" style="padding:12px;" align="justify">
+      {% for program in programs %}
+      <a href="{{ program.program_file }}" target="_blank" title="Capture and share screenshot on {{ program.platform }}">
+	Download xScreenshot for {{ program.platform }}</a>
+      <br />
+      <strong>
+	{{ program.description }}
+      </strong>
+      <br />
+      {{ program.description }}
+      <br />
+      <br />
+
+  {% endfor %}
+    </div>
+  </div>
+
+
+  {% endblock content_text %}

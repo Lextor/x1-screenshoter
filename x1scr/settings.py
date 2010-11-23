@@ -69,7 +69,7 @@ MEDIA_URL = 's/'
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/adminmedia/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'hy3!g)ix0k&!f&ozw6w%7dx4$-kgpp%5!j*%-eagi1wp4+byag'
@@ -123,10 +123,12 @@ INSTALLED_APPS = (
     'profiles',
     'x1scr.apps.screenshot',
     'x1scr.apps.inbox',
+    'x1scr.apps.program',
+    'x1scr.apps.profile',
 
 )
 
-AUTH_PROFILE_MODULE = 'inbox.UserProfile'
+AUTH_PROFILE_MODULE = 'profile.UserProfile'
 
 PASSWORD_RESET_TIMEOUT_DAYS = 2
 
