@@ -2,8 +2,8 @@
     <div align="justify" class="graypanel">
       <span class="smalltitle">News</span><br /><br />
     {% for item in news %}
-      <span class="smallredtext">{{ item.name }}</span><br />
-      <span class="bodytext">{{ item.chortext }}<br />
+      <span class="smallredtext">{{ item.title|safe }}</span>
+      <span class="bodytext">{{ item.chortext|safe }}
       {{ item.date_published }}</span>
       <a href="{% url news_item item.id %}" class="smallgraytext">More...</a><br /><br />
     {% endfor %}
