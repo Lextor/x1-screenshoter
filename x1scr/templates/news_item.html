@@ -7,10 +7,10 @@
 
   <div class="bodytext" style="padding:90px 15px;" align="center">
     <div style="padding:10px">
-      <span class="titletext">{{ news.name }}</span>
+      <span class="titletext">{{ news.title|safe }}</span>
     </div>
     <div class="bodytext" style="padding:12px;" align="justify">
-      {{ news.text }}
+      {{ news.text|safe }}
     </div>
   </div>
 
