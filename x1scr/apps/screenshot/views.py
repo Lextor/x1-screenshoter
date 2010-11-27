@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect, get_object_or_404
 from django.template import RequestContext
 from django import forms
+import xml.etree.ElementTree as ET
 
 #from x1scr.utils.thumbs import generate_thumb
 #from django.conf import settings
@@ -29,7 +30,15 @@ def file_uploader(request):
         if request.user.is_authenticated():
             screenshot_instance.user = request.user
         screenshot_instance.screenshot.save(file_object.name, file_object, save=True)
-        return HttpResponse(screenshot_instance.hash_url())
+        root_tree = ET.Element("xscreenshot")
+        errorid = ET.SubElement(root_tree, "errorid")
+        directlink = ET.SubElement(root_tree, "directlink")
+        directlink.text = screenshot_instance.hash_url()
+        forumlink = ET.SubElement(root_tree, "forumlink")
+        bloglink = ET.SubElement(root_tree, "bloglink")
+        shortlink = ET.SubElement(root_tree, "shortlink")
+
+        return HttpResponse(ET.tostring(root_tree), mimetype="text/xml")
 
     return redirect('test-sender-file')
 

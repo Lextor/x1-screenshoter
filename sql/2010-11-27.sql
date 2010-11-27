@@ -1,0 +1,1 @@
+ALTER TABLE `screenshot_screenshotfile` MODIFY COLUMN `unique_hash` varchar(16) NOT NULL UNIQUE;
