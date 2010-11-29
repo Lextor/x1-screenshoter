@@ -2,7 +2,41 @@
 
 
 {% block content %}
-<div class="bodytext" style="padding:90px 15px;" align="center">
+
+<div style="padding:1px;" class="smallgraytext" align="center">
+<table class="graypanel">
+    <tr>
+        <td>
+            IM/Chat:
+        </td>
+        <td>
+            <input class="inputbox" type="text" size="35" value="{{ screenshot_file.hash_url }}">
+        </td>
+        <td>
+            Forum:
+        </td>
+        <td>
+            <input class="inputbox" type="text" size="35" value="[URL={{ screenshot_file.hash_url }}][IMG]{{ screenshot_file.direct_url }}[/IMG][/URL]">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Blog:
+        </td>
+        <td>
+            <input class="inputbox" type="text" size="35" value='<a target="_blank" href="{{ screenshot_file.hash_url }}"><img src="{{ screenshot_file.direct_url }}" border="0"></a>'>
+        </td>
+        <td>
+            ShortLink:
+        </td>
+        <td>
+            <input class="inputbox" type="text" size="35" value="">
+        </td>
+    </tr>
+</table>
+</div>
+
+<div class="bodytext" style="padding:5px 15px;" align="center">
   <a href="{{ screenshot_file.direct_url }}">
     <img src="{{ screenshot_file.direct_url }}" class="screenshot_image" alt="{{ screenshot_file.name }}"{% if screenshot_file.screenshot.width > 800 %} width="100%"{% endif %} />
   </a>
