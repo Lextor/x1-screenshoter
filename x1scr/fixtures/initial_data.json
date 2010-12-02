@@ -45,6 +45,21 @@
     }
   }, 
   {
+    "pk": 4, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Terms of use", 
+      "url": "/termsofuse/", 
+      "template_name": "", 
+      "sites": [
+        1
+      ], 
+      "content": "", 
+      "enable_comments": false
+    }
+  }, 
+  {
     "pk": 1, 
     "model": "auth.user", 
     "fields": {
@@ -54,42 +69,12 @@
       "is_active": true, 
       "is_superuser": true, 
       "is_staff": true, 
-      "last_login": "2010-11-20 14:05:37", 
+      "last_login": "2010-11-29 03:44:33", 
       "groups": [], 
       "user_permissions": [], 
       "password": "sha1$54dfe$fc5d8a6710a2b4b9ee008eda847c6b6599f0d417", 
       "email": "admin@testl.com", 
       "date_joined": "2010-11-06 11:11:43"
-    }
-  }, 
-  {
-    "pk": 1, 
-    "model": "program.program", 
-    "fields": {
-      "ico": "", 
-      "description": "First screenshoter for Linux", 
-      "promo": "", 
-      "program_file": "http://sourceforge.net/projects/xscreenshot/files/xscreenshot-linux-i386.tar.gz/download", 
-      "releasedate": "2010-11-20", 
-      "platform": "Linux", 
-      "version": "0.1", 
-      "published": true, 
-      "features": []
-    }
-  }, 
-  {
-    "pk": 2, 
-    "model": "program.program", 
-    "fields": {
-      "ico": "", 
-      "description": "Powerful Screenshoter anywhere\r\n", 
-      "promo": "", 
-      "program_file": "http://sourceforge.net/projects/xscreenshot/files/xscreenshot-win32.exe/download", 
-      "releasedate": "2010-11-22", 
-      "platform": "Windows", 
-      "version": "0.1", 
-      "published": true, 
-      "features": []
     }
   }
 ]
