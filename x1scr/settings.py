@@ -128,6 +128,10 @@ INSTALLED_APPS = (
     'x1scr.apps.profile',
 )
 
+CAPTCHA_SIZE = 180, 50
+CAPTCHA_REFRESH = True
+CAPTCHA_REFRESH_LINK_TEXT = 'refresh'
+
 AUTH_PROFILE_MODULE = 'profile.UserProfile'
 
 PASSWORD_RESET_TIMEOUT_DAYS = 2
