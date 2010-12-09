@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 {% block title %}Registration{% endblock title %}
+
+{% block extra_styles %}
+{% include 'openid_head.html' %}
+{% endblock extra_styles %}
+
+
 {% block content_text %}
+
 <div id="contenttext">
 <div style="padding:10px">
     <span class="titletext">Registration</span>
 </div>
 <div style="padding:30px;">
-
+{% include 'openid_body.html' %}
 <form method="post" action="">
 {% csrf_token %}
 <table>

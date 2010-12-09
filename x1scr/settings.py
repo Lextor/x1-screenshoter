@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.messages',
     'django.contrib.admin',
+    'django_openid_auth',
     'registration',
     'profiles',
     'x1scr.apps.screenshot',
@@ -147,6 +148,13 @@ DEFAULT_FROM_EMAIL = 'info@google.ru'
 
 API_KEY = 'R_54f83e7ae12150a45c0d60c17f71aa09'
 BIT_USERNAME = 'oksanaslu'
+
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
+                           'auth.GoogleBackend', )
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_URL = '/logout/'
+OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/id'
 
 try:
     from settings_local import *
