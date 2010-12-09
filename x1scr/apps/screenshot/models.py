@@ -14,6 +14,7 @@ class ScreenshotFile(models.Model):
     unique_hash = models.CharField(unique=True, max_length=16, editable=False)
     name = models.CharField(max_length=256)
     datetime = models.DateTimeField(auto_now_add=True)
+    short_url = models.CharField(max_length=256)
 
     def __unicode__(self):
         return settings.SITE_URL + self.screenshot.url
@@ -43,4 +44,5 @@ class ScreenshotFile(models.Model):
         return settings.SITE_URL + self.screenshot.url
 
     def get_thumbnail_url(self):
-        return self.screenshot.url_100x100
+        return self.screenshot.url_100x100     
+    

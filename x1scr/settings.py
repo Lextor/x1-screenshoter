@@ -145,6 +145,8 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'info@google.ru'
 
+API_KEY = 'R_54f83e7ae12150a45c0d60c17f71aa09'
+BIT_USERNAME = 'oksanaslu'
 
 try:
     from settings_local import *
