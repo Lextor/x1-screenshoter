@@ -69,7 +69,7 @@ var openid = {
    	  	var x = box_size == 'small' ? -index*24 : -index*100;
    	  	var y = box_size == 'small' ? -60 : 0;
         return '<a title="'+this.image_title.replace('{provider}', provider["name"])+'" href="javascript:openid.signin(\'' + box_id + '\');"' +
-    			' style="background: #FFF url(' + this.img_path + 'openid-providers-' + this.lang + '.png); background-position: ' + x + 'px ' + y + 'px" ' +
+    			' style="background: #FFF url(/s/openid-selector/' + this.img_path + 'openid-providers-' + this.lang + '.png); background-position: ' + x + 'px ' + y + 'px" ' +
     			'class="' + box_id + ' openid_' + box_size + '_btn"></a>';
     },
     /* Provider image click */
