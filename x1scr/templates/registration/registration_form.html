@@ -2,21 +2,22 @@
 {% block title %}Registration{% endblock title %}
 
 {% block extra_styles %}
-{% include 'openid_head.html' %}
+
 {% endblock extra_styles %}
 
+{% block content %}
 
-{% block content_text %}
 
-<div id="contenttext">
-<div style="padding:10px">
+<div id="blocktext" style="padding-top:10px;">
     <span class="titletext">Registration</span>
 </div>
-<div style="padding:30px;">
-{% include 'openid_body.html' %}
+<div id="blocktext" style="padding:10px 0px;">
+<div  style="width: 450px; float: left;">
+<table>
 <form method="post" action="">
 {% csrf_token %}
-<table>
+
+
 {% for field in form %}
     <tr>
         <td></td>
@@ -43,10 +44,39 @@
         <td>
             {{ field.help_text }}
         </td>
+    
 {% endfor %}
-</table>
-<p>
-<input type="submit" value="Register" />
+<tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Register" />
+        </td>
+    </tr>
+
 </form>
-</div></div>
- {% endblock content_text %}
+</table>
+</div>
+
+<div style="width: 270px; float: right;">
+<table>
+<tr>
+<td>
+<fieldset>
+<legend>Sign In Using Your OpenID</legend>
+<p>Please click</p>
+
+<form method="post" action="/openid/login/">
+{% csrf_token %}
+<input type="hidden" name="openid_identifier" value="https://www.google.com/accounts/o8/id">
+<button style="clear: both"><img src="{{ MEDIA_PREFIX }}img/scene.png"></button>
+
+</form>
+
+
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+{% endblock content %} 

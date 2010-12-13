@@ -149,12 +149,19 @@ DEFAULT_FROM_EMAIL = 'info@google.ru'
 API_KEY = 'R_54f83e7ae12150a45c0d60c17f71aa09'
 BIT_USERNAME = 'oksanaslu'
 
-AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
-                           'auth.GoogleBackend', )
-LOGIN_URL = '/login/'
+
+AUTHENTICATION_BACKENDS = (
+            'django_openid_auth.auth.OpenIDBackend',
+            'django.contrib.auth.backends.ModelBackend',
+)
+
+OPENID_CREATE_USERS = True
+OPENID_UPDATE_DETAILS_FROM_SREG = True
+LOGIN_URL = '/openid/login/'
 LOGIN_REDIRECT_URL = '/'
-LOGOUT_URL = '/logout/'
-OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/id'
+
+#OPENID_SSO_SERVER_URL = 'https://www.google.com/accounts/o8/id'
+
 
 try:
     from settings_local import *

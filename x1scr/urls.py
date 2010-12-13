@@ -21,9 +21,7 @@ urlpatterns = patterns('',
     (r'^profiles/', include('profiles.urls')),        
     url(r'^news/(?P<news_id>\d+)$', "x1scr.views.news_item", name="news_item"),
     url(r'^accounts/profile/$', "x1scr.views.profile", name="profile"),
-    url(r'^login/$', 'django_openid_auth.views.login_begin', name='openid-login'),
-    url(r'^login-complete/$', 'django_openid_auth.views.login_complete', name='openid-complete'),
-    url(r'^logout/$', 'django.contrib.auth.views.logout', {'next_page': '/',}, name='logout'),     
+    (r'^openid/', include('django_openid_auth.urls')),       
     (r'^admin/', include(admin.site.urls)),
 )
 
