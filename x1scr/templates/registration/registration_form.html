@@ -1,7 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title %}Registration{% endblock title %}
 
 {% block extra_styles %}
+<style type="text/css">
+input.openid {
+    background: url(/openid/logo.gif) no-repeat;
+    background-position: 0 50%;
+    padding-left: 16px;
+}
+</style>
 
 {% endblock extra_styles %}
 
@@ -57,25 +65,37 @@
 </table>
 </div>
 
-<div style="width: 270px; float: right;">
-<table>
-<tr>
-<td>
+<div style="width: 350px; float: right;">
+
+
 <fieldset>
 <legend>Sign In Using Your OpenID</legend>
-<p>Please click</p>
+<table><tr>
+           <td>
+                Please click
+           </td>
+           <td>
+           
+                <form method="post" action="/openid/login/">
+                {% csrf_token %}
 
-<form method="post" action="/openid/login/">
-{% csrf_token %}
-<input type="hidden" name="openid_identifier" value="https://www.google.com/accounts/o8/id">
-<button style="clear: both"><img src="{{ MEDIA_PREFIX }}img/scene.png"></button>
+                <input type="hidden" name="openid_identifier" value="https://www.google.com/accounts/o8/id" />
+                <button><img src="{{ MEDIA_PREFIX }}img/google.png" width=65 height=25 /></button>
+            
+                </form>
+            </td></tr>
+            <tr><td>
 
-</form>
+                or enter your
+            </td>
+            <td>
+                <a href="/openid/login/"><img src="{{ MEDIA_PREFIX }}img/openid.png" alt="OpenID" width=80 height=40  style: border=0 /> </a>
+             </td>
+             </tr>
+</table>            
+</fieldset>
 
 
-</td>
-</tr>
-</table>
 </div>
 </div>
 

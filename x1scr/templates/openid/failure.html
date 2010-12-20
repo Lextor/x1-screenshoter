@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% load i18n %}
+
+{% block title %}OpenID failed{% endblock title %}
+{% block content %}
+<div id="blocktext" style="padding-top:10px;">
+    <span class="titletext">OpenID failed</span>
+</div>
+<div id="blocktext" style="padding:10px 0px;">    
+    
+    <p>{{ message|escape }}</p>
+<a href="/openid/login/">Back to OpenID form</a>
+</div>
+
+{% endblock content %}
