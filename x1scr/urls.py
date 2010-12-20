@@ -6,11 +6,8 @@ from forms import SuperCaptchaForm
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', "x1scr.views.index", name="index"),
-    url(r'^about/$', "x1scr.views.about", name="about"),
-    url(r'^download/$', "x1scr.apps.program.views.download", name="download"),
-    url(r'^features/$', "x1scr.views.features", name="features"),
-    url(r'^termsofuse/$', "x1scr.views.termsofuse", name="termsofuse"),
+    url(r'^$', "x1scr.views.index", name="index"),    
+    url(r'^download/$', "x1scr.apps.program.views.download", name="download"),    
     url(r'^contact/$', "x1scr.apps.inbox.views.contact", name="contact"),
     url(r'^message/$', "x1scr.views.message", name="message"),
     url(r'^base/$', "x1scr.views.base", name="base"),

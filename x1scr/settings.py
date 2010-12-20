@@ -87,6 +87,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.contrib.messages.context_processors.messages",
     "x1scr.context_processors.media_url",
+    "x1scr.context_processors.navigation",
 )
 
 MIDDLEWARE_CLASSES = (
@@ -127,6 +128,7 @@ INSTALLED_APPS = (
     'x1scr.apps.program',
     'x1scr.apps.news',
     'x1scr.apps.profile',
+    'x1scr.apps.navigation',
 )
 
 CAPTCHA_SIZE = 180, 50

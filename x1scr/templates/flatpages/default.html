@@ -1,12 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-    "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html>
-<head>
-<title>{{ flatpage.title }}</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-{{ flatpage.content }}
-</body>
-</html>
+{% block title %}{{ flatpage.title }}{% endblock title %}
 
+  {% block content_text %}
+  <div id="contenttext">
+    <div style="padding:10px">
+    </div>
+    <div class="bodytext" style="padding:12px;" align="justify">
+    {{ flatpage.content|safe }}
+    </div>
+  </div>
+  {% endblock content_text %}
