@@ -1,19 +1,14 @@
 {% extends "base.html" %}
 
 {% block title %}Activation{% endblock title %}
-{% block content_text %}
-<div id="contenttext">
-<div style="padding:10px">
+{% block content %}
+<div id="blocktext" style="padding-top:10px;">
     <span class="titletext">Activation</span>
 </div>
-<div style="padding:55px;" align="justify">
-{% if user.is_authenticated %}
-Что такое, {{ user.username }}? Вы же уже авторизорваны.
-Впрочем, всегда можно <a href="{% url auth_logout %}">выйти</a>.<br/><br/>
-{% else %}
-{% if form.non_field_errors %}
-{{ form.non_field_errors }}
-{% endif %}
+<div id="blocktext" style="padding:10px 0px;">
+<div  style="width: 450px; float: left;  text-align:left;">
+
+
 
 <form method="post" action="">
 {% csrf_token %}
@@ -58,8 +53,40 @@
 <LI><a href="{% url auth_password_reset %}">Forgot your password?</a>
 <LI>Don't have an account? <a href="{% url registration_register %}">Sign up now</a>
 </ul>
-{% endif %}
-</div></div>
- {% endblock content_text %}
+
+</div>
+<div style="width: 350px; float: right;">
+
+
+<fieldset>
+<legend>Sign In Using Your OpenID</legend>
+<table><tr>
+           <td>
+                Please click
+           </td>
+           <td>
+           
+                <form method="post" action="/openid/login/">
+                {% csrf_token %}
+
+                <input type="hidden" name="openid_identifier" value="https://www.google.com/accounts/o8/id" />
+                <button><img src="{{ MEDIA_PREFIX }}img/google.png" width=65 height=25 /></button>
+            
+                </form>
+            </td></tr>
+            <tr><td>
+
+                or enter your
+            </td>
+            <td>
+              <a href="/openid/login/"><img src="{{ MEDIA_PREFIX }}img/openid.png" alt="OpenID" width=80 height=40  style: border=0 /></a>
+            </td></tr>
+</table>            
+</fieldset>
+
+
+</div>
+</div>
+ {% endblock content %}
 
 
