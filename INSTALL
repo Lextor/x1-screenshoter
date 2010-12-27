@@ -6,6 +6,11 @@ http://trac.khavr.com/agiloprojects/chilli-wolf/ticket/1#comment:5
 3) workon x1scr-env
 4) easy_install pip
 5) pip install -U -r requirements.txt
+6) django-openid-auth-0.3
+7) supercaptcha
+8) bitly  #svn checkout http://python-bitly.googlecode.com/svn/trunk/ python-bitly-read-only
+9) django-profiles
+10) django-registration
 
 
 cp x1scr/settings_local.py.example x1scr/settings_local.py
