@@ -1,4 +1,10 @@
 Django==1.2.3
 django-annoying==0.7.4
 django-registration==0.7
-django-profiles==0.2
+django-profiles==0.2 
+django-openid-auth-0.3 https://launchpad.net/django-openid-auth/+download
+supercaptcha  https://bitbucket.org/barbuza/supercaptcha/downloads
+bitly #svn checkout http://python-bitly.googlecode.com/svn/trunk/ python-bitly-read-only
+django-stroges  https://bitbucket.org/david/django-storages/downloads
+s3-example-libraries       http://aws.amazon.com/s3/
+
